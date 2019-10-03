@@ -1,0 +1,118 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+@mixin button {
+    display: inline-block;
+    padding:0.35em 1.2em;
+    color : #ffffff;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    font-size: 14px;
+    text-align:center;
+    transition: all 0.2s;
+
+    @media only screen and (min-width: 480px) and (max-width: 599px){
+        padding:0.30em 1em;
+        margin:0 0.2em 0.2em 0;
+        font-size: 12px;
+    }
+
+    @media only screen and (min-width: 373px) and (max-width: 480px){
+        padding:0.20em 0.5em;
+        margin:0 0.1em 0.1em 0;
+        font-size: 9px;
+    }
+
+    @media only screen  and (max-width: 372px) {
+        display: block;
+        padding:0.17em 0.3em;
+        margin:0 0.1em 0.1em 0;
+        font-size: 6px;
+    }
+}
+
+.avatar{
+    width: 70px;
+    @media only screen and(max-width: 372px){
+        width: 30px;
+    }
+    
+    @media only screen and (min-width: 373px) and(max-width: 479px){
+        width: 35px;
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 599px){
+        width: 50px;
+    }
+}
+
+
+.rejectButton{
+    background-color: #a4373a;
+    margin: 5px;
+
+    &:hover{
+        background-color: #d83b01;
+    }   
+}
+
+
+.acceptButton{
+    width: 70px;
+    margin: 5px  
+}
+
+.onePerson{
+    @include ms-Grid-row;
+    @include ms-lg12;
+    @include ms-md12;
+    @include ms-sm12;
+    background-color: transparent;
+    position: relative;
+
+    &__position{
+        margin-left: 10px;
+    }
+
+    &__content{
+        background-color: #fff;
+        box-shadow:  0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px;
+
+        &_summary{
+            position: relative;
+            
+            .buttonAccept{
+                @include button;
+                background-color : rgb(0, 173, 86);
+                &:hover {
+
+                    background-color : rgb(0, 180, 100);
+                }
+            }
+
+            .buttonReject{
+                @include button;
+                background-color : rgb(209, 52, 56);
+                &:hover {
+
+                    background-color : rgb(215, 70, 70);
+                }
+            }
+            
+        }
+
+        &_date{
+            text-align: center;
+            position: relative;
+            width: 35%;
+        }
+    }
+
+}
+
+
+
+

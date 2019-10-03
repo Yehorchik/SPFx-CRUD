@@ -1,0 +1,58 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+
+.onePerson{
+    position: relative;
+    padding: 5px;
+    box-shadow:  0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.bold{
+    font-weight: 550;
+}
+
+
+.avatar{
+    width: 70px;
+    @media only screen and(max-width: 372px){
+        width: 30px;
+    }
+
+    @media only screen and (min-width: 373px) and(max-width: 479px){
+        width: 35px;
+    }
+}
+
+
+.comment{
+    font-weight: 500;
+}
+
+.marginText{
+    margin-left: 10px;
+
+    @media only screen and(max-width: 372px){
+        margin-left: 0px;
+    }
+
+    @media only screen and (min-width: 373px) and(max-width: 479px){
+        margin-left: 0px;
+    }
+}
+
+.closeHandler {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    cursor: pointer;
+    transition: all .3s;
+
+    @media only screen and(max-width: 372px){
+        font-size: 9px;
+    }
+    
+    &:hover{
+        font-weight: 600;
+    }
+}

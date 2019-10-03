@@ -1,0 +1,233 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.circleShadow{
+    box-shadow:  0 5px 4px 0 rgba(0, 0, 0, 0.2), 0 0 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+$acceptedColor :rgb(186, 216, 10);
+$inProgressColor: rgb(0, 188, 242);
+$allColor: orange;
+$whiteColor : white;
+
+
+.iconContainer{
+  padding: 10px;
+  position: relative;
+
+  .icon{
+  cursor: pointer;
+  transition: all .6s;
+}
+
+  .newInvites{
+    clip-path: circle(8.5px at center);
+    font-size: 15px;
+    padding: 5px;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    color :#fff;
+    background-color: red;
+
+    @media only screen and(max-width: 480px){
+      font-size: 7.5px;
+      clip-path: circle(4px at center);
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 599px){
+      font-size: 10.5px;
+      clip-path: circle(6px at center);
+    }
+  }
+}
+
+
+// @mixin buttonCommon {
+//   background: transparent;
+//   border-width: 2px;
+//   border-style: solid;
+//   position: relative;
+//   margin: 1em;
+//   display: inline-block;
+//   padding: 0.5em 1em;
+//   transition: all 0.3s ease-in-out;
+//   text-align: center;
+//   font-weight: bold;
+
+//   &:before,
+//   &:after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     box-sizing: border-box;
+//     border-style: solid;
+//     width: 1em;
+//     height: 1em;
+//     transition: all 0.3s ease-in-out;
+//   }
+
+//   &:before {
+//     top: -6px;
+//     left: -6px;
+//     border-width: 2px 0 0 2px;
+//     z-index: 5;
+//   }
+
+//   &:after {
+//     bottom: -6px;
+//     right: -6px;
+//     border-width: 0 2px 2px 0;
+//   }
+
+//   &:hover:before,
+//   &:hover:after {
+//     width: calc(100% + 12px);
+//     height: calc(100% + 12px);
+//   }
+
+//   &:hover{
+//     color: #fff; 
+//   }
+
+// }
+
+// @mixin activeButton {
+//   background: transparent;
+//   border-width: 2px;
+//   border-style: solid;
+//   position: relative;
+//   margin: 1em;
+//   display: inline-block;
+//   padding: 0.5em 1em;
+//   transition: all 0.3s ease-in-out;
+//   text-align: center;
+//   font-weight: bold;
+
+//   &:before,
+//   &:after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     box-sizing: border-box;
+//     border-style: solid;
+//     width: 1em;
+//     height: 1em;
+//     transition: all 0.3s ease-in-out;
+//   }
+
+//   &:before {
+//     top: -6px;
+//     left: -6px;
+//     border-width: 2px 0 0 2px;
+//     z-index: 5;
+//     width: calc(100% + 12px);
+//     height: calc(100% + 12px);
+//   }
+
+//   &:after {
+//     bottom: -6px;
+//     right: -6px;
+//     border-width: 0 2px 2px 0;
+//     width: calc(100% + 12px);
+//     height: calc(100% + 12px);
+//   }
+// }
+
+
+// .acceptedButton {
+//   @include buttonCommon;
+//   color: $acceptedColor;
+//   border-color:  $acceptedColor;
+//   &:before,
+//   &:after{
+//     border-color: $acceptedColor;
+//   }
+
+//   &:hover{
+//     background-color: $acceptedColor; /////......
+//     border-color: $acceptedColor;
+//   }
+
+//   &:hover:before,
+//   &:hover:after {
+//     border-color: $acceptedColor ;
+//   } 
+
+// }
+
+// .acceptedButtonActive {
+//   @include activeButton;
+//   background-color: $acceptedColor;
+//   color: $whiteColor;
+//   border-color:  $acceptedColor;
+//   &:before,
+//   &:after{
+//     border-color: $acceptedColor;
+//   }
+// }
+
+// .allButton{
+//   @include buttonCommon;
+//   color: $allColor;
+//   border-color:  $allColor;
+//   &:before,
+//   &:after{
+//     border-color: $allColor;
+//   }
+
+//   &:hover{
+//     background-color: $allColor; /////......
+//     border-color: $allColor;
+//   }
+
+//   &:hover:before,
+//   &:hover:after {
+//     border-color: $allColor ;
+//   }
+// }
+
+// .allButtonActive {
+//   @include activeButton;
+//   background-color: $allColor;
+//   color: $whiteColor;
+//   border-color:  $allColor;
+//   &:before,
+//   &:after{
+//     border-color: $allColor;
+//   }
+// }
+
+// .inProgressButton{
+//   @include buttonCommon;
+//   color: $inProgressColor;
+//   border-color:  $inProgressColor;
+//   &:before,
+//   &:after{
+//     border-color: $inProgressColor;
+
+//   }
+
+//   &:hover{
+//     background-color: $inProgressColor; /////......
+//     border-color: $inProgressColor;
+//   }
+
+//   &:hover:before,
+//   &:hover:after {
+
+//     border-color: $inProgressColor;
+//   }
+// }
+
+// .inProgressButonActive {
+//   @include activeButton;
+//   background-color: $inProgressColor;
+//   color: $whiteColor;
+//   border-color:  $inProgressColor;
+//   &:before,
+//   &:after{
+//     border-color: $inProgressColor;
+
+//   }
+// }
+
